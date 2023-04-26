@@ -1,7 +1,7 @@
 /* src/Profile.js */
 import React, { useState, useEffect } from 'react'
 import { Auth } from 'aws-amplify'
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import { withAuthenticator, Authenticator } from '@aws-amplify/ui-react'
 import Container from './Container'
 
 const Profile = () => {
@@ -22,7 +22,9 @@ const Profile = () => {
       <h2>Username: {user.username}</h2>
       <h3>Email: {user.email}</h3>
       <h4>Phone: {user.phone_number}</h4>
-      <AmplifySignOut />
+    <Authenticator>
+        <button onClick={signOut}>Sign Out</button>
+    </Authenticator>
     </Container>
   );
 }
