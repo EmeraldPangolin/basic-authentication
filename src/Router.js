@@ -23,10 +23,10 @@ const Router = () => {
     <HashRouter>
       <Nav current={current} />
       <Routes>
-        <Route exact path="/" component={Public}/>
-        <Route exact path="/protected" component={Protected} />
-        <Route exact path="/profile" component={Profile}/>
-        <Route component={Public}/>
+        <Route exact path="/" element={Public}/>
+        <Route exact path="/protected" element={Protected} />
+        <Route exact path="/profile" element={Profile}/>
+        <Route element={Public}/>
       </Routes>
     </HashRouter>
   )
