@@ -2,7 +2,7 @@
 import React from 'react'
 import Container from './Container'
 
-function Public() {
+const Public = () => {
   return (
     <Container>
       <h1>Public route</h1>
