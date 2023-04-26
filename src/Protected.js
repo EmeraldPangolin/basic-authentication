@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { Auth } from 'aws-amplify'
 import Container from './Container'
-import useNavigate from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Protected = (props) => {
     const navigate = useNavigate();
