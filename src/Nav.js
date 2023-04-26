@@ -2,7 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Menu } from 'antd'
-import { HomeOutlined, ProfileOutlined, FileProtectOutlined } from
+import { HomeOutlined, ProfileOutlined, FileProtectOutlined, MoreOutlined } from
          '@ant-design/icons'
 
 const Nav = (props) => {
@@ -24,6 +24,11 @@ const Nav = (props) => {
           <Link to='/protected'>
             <FileProtectOutlined />Protected
           </Link>
+        </Menu.Item>
+        <Menu.Item key='morePublic'>
+            <Link to='/morePublic'>
+                <MoreOutlined/>More Public
+            </Link>
         </Menu.Item>
       </Menu>
     </div>
