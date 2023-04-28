@@ -6,7 +6,7 @@ import Nav from './Nav'
 import Public from './Public'
 import Profile from './Profile'
 import Protected from './Protected'
-import MorePublic from '.MorePublic'
+import MorePublic from './MorePublic'
 
 const Router = () => {
   const [current, setCurrent] = useState('home')
@@ -24,10 +24,10 @@ const Router = () => {
     <HashRouter>
       <Nav current={current} />
       <Routes>
-        <Route exact path="/" element={Public}/>
-        <Route exact path="/protected" element={Protected} />
-        <Route exact path="/profile" element={Profile}/>
-        <Route exact path="/morePublic" element={morePublic}/>
+        <Route exact path="/" element={<Public/>}/>
+        <Route exact path="/protected" element={<Protected/>} />
+        <Route exact path="/profile" element={<Profile/>}/>
+        <Route exact path="/morePublic" element={<morePublic/>}/>
         <Route element={Public}/>
       </Routes>
     </HashRouter>
